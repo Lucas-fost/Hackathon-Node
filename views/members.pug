@@ -8,9 +8,9 @@ block content
     .col-md-4
       ul
         for user in users
-          li= !user.profile.name ? 'User has no name' : user.profile.name
+          li(style={'list-style': 'none'})= !user.profile.name ? 'User has no name' : user.profile.name
     .col-md-4
-      ul
+      ul(class='userList')
         for user in users
-          li
+          li(style={'list-style': 'none'})
             a(href=`/members/member/${user._id}`)='View Profile'
